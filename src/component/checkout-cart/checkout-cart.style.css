@@ -1,0 +1,16 @@
+.checkoutCart{
+    margin-bottom: 20px;
+    display:flex;
+    flex: 100%;
+}
+.img{
+    width:10rem;
+    height:12rem;
+}
+
+.checkout{
+    flex: 70%;
+    display:flex;
+    justify-content: space-between;
+    margin-left: 80px;
+}
