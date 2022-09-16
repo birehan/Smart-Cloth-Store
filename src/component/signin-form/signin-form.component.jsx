@@ -2,7 +2,7 @@ import React from 'react'
 import './signin-form.style.css'
 import InputForm from '../input-form/input-form.component';
 import SubmitButton from '../submit-button/submit-button.component';
-import {signInWithGoogle, auth, createUserProfileDocument} from '../../firebase/firebase.utils'
+import {signInWithGoogle, auth} from '../../firebase/firebase.utils'
 import {signInWithEmailAndPassword} from 'firebase/auth'
 
 
@@ -23,6 +23,7 @@ class SignInForm extends React.Component {
             this.setState({ email: '', password: '' });
         }
         catch(error){
+            console.log("hola temosa")
             console.log(error);
         }
 

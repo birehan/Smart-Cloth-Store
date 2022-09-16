@@ -16,7 +16,7 @@ const CartDropDown = ({cartItems, toggleCartHidden}) => {
     return ( <div className="cart-dropdown">
     <div className="cart-items">
         {
-            (cartItems.length == 0)? 
+            (cartItems.length === 0)? 
             <span className="empty-message">Your cart is empty</span>:
             cartItems.map(cartItem => <CartItem key={cartItem.id} item = {cartItem} />)
         }

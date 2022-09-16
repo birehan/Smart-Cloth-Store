@@ -3,22 +3,16 @@ import './input-form.style.css'
 
 
 
-var cl = false
-const InputForm = ({type, name, handleChange, label, value}) => {
-    if (label && value.length){
-        cl = true;
-    }
-    else{
-        cl = false;
-    }
 
+const InputForm = ({type, name, handleChange, label, value}) => {
+  
     return (
         <div className='group'>
-            <input className='form-input' name={name} type={type} onChange={handleChange} required>
+            <input  className='form-input' name={name} type={type} onChange={handleChange} required>
            
             </input>
             {label ?
-                <label className={` ${cl ? 'shrink': ''} form-input-label`}>{label}</label> : null}
+                <label className={`shrink form-input-label`}>{label}</label> : null}
         </div>
     );
 

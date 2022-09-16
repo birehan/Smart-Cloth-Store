@@ -10,7 +10,6 @@ const orderReducer = (state = INITIAL_STATE, action) => {
     switch (action.type){
         case orderTypes.ADD_TO_ORDER: {
             let is_order_exist = false;
-            let index = -1;
             for(let i=0; i< state.orders.length; i++){
                 if(state.orders[i].id === action.payload.id){
                     is_order_exist = true;

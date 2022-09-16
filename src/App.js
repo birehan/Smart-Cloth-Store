@@ -1,7 +1,7 @@
 import './App.css';
 import React from "react";
 import {HomePage} from './pages/homepage/homepage.component'
-import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import ShopPage from './pages/shoppage/shop.component';
 import Header from './component/header/header.component'
 import SignIn from './pages/signin/signin.component';
@@ -26,7 +26,7 @@ class App extends React.Component{
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
       if (userAuth){
         const userRef = await createUserProfileDocument(userAuth);
-        const unsub = onSnapshot(userRef, (doc) =>{
+        onSnapshot(userRef, (doc) =>{
           setCurrentUser({
             id: doc.id,
              ...doc.data()
